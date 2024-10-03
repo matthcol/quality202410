@@ -17,3 +17,13 @@ class Circle:
     
     def perimeter(self) -> float:
         raise NotImplementedError
+    
+    def translate(self, delta_x, delta_y) -> None:
+        """ translate this circle with relative horizontal and vertical offsets
+
+        Arguments:
+        ----------
+        - delta_x (float): horizontal offset
+        - delta_y (float): vertical offset
+        """
+        raise NotImplementedError
