@@ -3,6 +3,7 @@
 # https://peps.python.org/pep-0008/
 
 from dataclasses import dataclass
+import math
 
 from computing.model.point import Point
 
@@ -13,10 +14,10 @@ class Circle:
     radius: float
 
     def surface(self) -> float:
-        raise NotImplementedError
+        return math.pi * self.radius**2
     
     def perimeter(self) -> float:
-        raise NotImplementedError
+        return 2.0 * math.pi * self.radius
     
     def translate(self, delta_x, delta_y) -> None:
         """ translate this circle with relative horizontal and vertical offsets
@@ -26,4 +27,4 @@ class Circle:
         - delta_x (float): horizontal offset
         - delta_y (float): vertical offset
         """
-        raise NotImplementedError
+        self.center.translate(delta_x=delta_x, delta_y=delta_y)
