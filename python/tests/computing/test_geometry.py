@@ -1,6 +1,6 @@
 # file regrouping all unit tests of module geometry
 import pytest
-from geometry import distance
+from computing.geometry import distance
 
 
 def test_distance_median():

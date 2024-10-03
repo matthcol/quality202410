@@ -2,7 +2,7 @@
 
 import pytest
 
-from fibonacci import fibo_binet, fibo_iterative
+from computing.fibonacci import fibo_binet, fibo_iterative
 
 
 @pytest.mark.parametrize(

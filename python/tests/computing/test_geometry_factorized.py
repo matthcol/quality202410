@@ -1,6 +1,6 @@
 import math
 import pytest
-from geometry import distance
+from computing.geometry import distance
 
 @pytest.fixture
 def triangle_345() -> tuple[float, float, float]:

@@ -23,6 +23,7 @@ def fibo_iterative(n: int) -> int:
     x2 = 1
     if n == 1:
         return x2
+    # if n >=2, loop is done at least once
     for _ in range(n-1):
         x1, x2 = x2, x1 + x2
     return x2
