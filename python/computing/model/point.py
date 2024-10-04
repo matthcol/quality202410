@@ -1,3 +1,4 @@
+import computing.geometry
 from dataclasses import dataclass
 
 # NB: rédaction simplifiée de classe
@@ -10,7 +11,10 @@ class Point:
     name: str | None = None
 
     def distance(self, other: 'Point') -> float:
-        raise NotImplementedError()
+        return computing.geometry.distance(
+            (self.x, self.y), 
+            (other.x, other.y)
+        )
     
     def translate(self, delta_x: float, delta_y: float) -> None:
         """ translate this point with relative horizontal and vertical offsets

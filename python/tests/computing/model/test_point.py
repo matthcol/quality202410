@@ -13,8 +13,15 @@ def point_anonymous():
 
 # tests
 
-def test_distance():
-    pass
+def test_distance(point_a, point_b, mocker):
+    mock_distance = mocker.patch('computing.geometry.distance', return_value=5.0)
+    # Act:
+    d = point_a.distance(point_b)
+    # Assert: 1 - return value 
+    assert d == 5.0
+    # Assert: 2 - mock has been called
+    mock_distance.assert_called_once_with((point_a.x, point_a.y),(point_b.x, point_b.y))
+    
 
 def test_translate_with_local_variable():
     # Arange: 1 object Point
