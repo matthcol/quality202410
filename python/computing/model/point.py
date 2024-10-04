@@ -11,10 +11,11 @@ class Point:
     name: str | None = None
 
     def distance(self, other: 'Point') -> float:
-        return computing.geometry.distance(
-            (self.x, self.y), 
-            (other.x, other.y)
-        )
+        # return computing.geometry.distance(
+        #     (self.x, self.y), 
+        #     (other.x, other.y)
+        # )
+        return 0.0
     
     def translate(self, delta_x: float, delta_y: float) -> None:
         """ translate this point with relative horizontal and vertical offsets
