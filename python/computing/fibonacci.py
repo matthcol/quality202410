@@ -8,7 +8,7 @@ def fibo_binet(n: int) -> int:
     # choice 2
     # return -1
     # choice
-    #raise NotImplemented()
+    #raise NotImplementedError()
 
     # Impl: Binet formula
     phi = (1 + math.sqrt(5)) / 2

@@ -15,7 +15,6 @@ create table movie (
 	color varchar(20) null,
 	pg varchar(15) null,
 	director_id int null,
-	constraint uniq_movie UNIQUE(title, year),
 	constraint chk_movie_year CHECK(year >= 1850)
 );
 
